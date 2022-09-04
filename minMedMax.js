@@ -8,7 +8,7 @@ function minMedMax(n1, n2, n3) {
     }else{
       a=[n1,n3,n2];
     }
-}else if(n2<n1 && n2<n3){
+}else if(n2<n1 && n2<n3 || n2==n3){
     if(n1<n3){
       a=[n2,n1,n3]; 
     }else{
@@ -28,6 +28,6 @@ function minMedMax(n1, n2, n3) {
  
  
 }
-console.log(minMedMax(2,2,10));
+console.log(minMedMax(-1,-1,10));
 module.exports = minMedMax
 
