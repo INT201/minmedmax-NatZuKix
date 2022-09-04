@@ -2,7 +2,7 @@ const { template } = require('@babel/core')
 
 function minMedMax(n1, n2, n3) {
  let a=[n1,n2,n3];
- if(n1<n3 && n1<n2){
+ if(n1<n3 && n1<n2 || n1==n2){
     if(n2<n3){
       a=[n1,n2,n3]; 
     }else{
@@ -18,7 +18,7 @@ function minMedMax(n1, n2, n3) {
   if(n2<n1){
     a=[n3,n2,n1]; 
   }else{
-    a=[n3,n1,n3];
+    a=[n3,n1,n2];
 }
 }
 
@@ -28,5 +28,6 @@ function minMedMax(n1, n2, n3) {
  
  
 }
+console.log(minMedMax(2,2,10));
 module.exports = minMedMax
 
